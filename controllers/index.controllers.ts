@@ -3,7 +3,7 @@ import { User } from "../interface/user.interface.ts";
 import { NewUser } from "../interface/newUser.interface.ts";
 import { v4 } from "https://deno.land/std@0.133.0/uuid/mod.ts";
 
-const users: User[] = [
+let users: User[] = [
   {
     id: "1",
     name: "Matias",
@@ -57,5 +57,15 @@ export const createUsers = async ({
   }
 };
 
-export const deleteUser = () => {};
-export const updateUsers = () => {};
+export const deleteUser = ({
+  response,
+  params,
+}: {
+  response: Response;
+  params: { id: string };
+}) => {
+  users = users.filter(user=>user.id !== params.id);
+  response.status=200;
+  response.body={message:"Usuario eliminado", users}
+};
+
