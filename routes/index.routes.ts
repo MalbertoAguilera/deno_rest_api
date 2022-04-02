@@ -8,12 +8,4 @@ router.post('/users', indexCtrl.createUsers);
 router.get('/users/:id', indexCtrl.getUser);
 router.delete('/users/:id', indexCtrl.deleteUser);
 
-router.get('/', ({response})=>{
-      response.body='hello world'
-})
-
-
-
-
-
 export default router;

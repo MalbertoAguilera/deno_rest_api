@@ -9,3 +9,6 @@ app.use(router.allowedMethods());
 console.log('server runnin 3000');
 
 await app.listen({port:3000});
+
+//CRUD de ususarios usando Oak
+//probar funcionalidad con Postman o ThunderClient

@@ -1,6 +1,5 @@
 import { Response, Request } from "https://deno.land/x/oak@v10.5.1/mod.ts";
 import { User } from "../interface/user.interface.ts";
-import { NewUser } from "../interface/newUser.interface.ts";
 import { v4 } from "https://deno.land/std@0.133.0/uuid/mod.ts";
 
 let users: User[] = [
